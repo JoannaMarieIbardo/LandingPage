@@ -1,0 +1,155 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #d6bbf5;
+    color: #281A31;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    background-color: #281A31;
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Georgia, Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.bucket-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bucket-section h2 {
+    color: #281A31;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #d6bbf5;
+}
+
+.bucket-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.bucket-item {
+    background: #f8f2ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #d6bbf5;
+    transition: transform 0.3s ease;
+}
+
+.bucket-item:hover {
+    transform: translateY(-5px);
+}
+
+.bucket-item h3 {
+    color: #281A31;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.bucket-item p {
+    color: #281A31;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background: #281A31;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .bucket-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .bucket-section {
+        padding: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .bucket-item h3 {
+        font-size: 1.2rem;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #281A31;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: #f5f3fa;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #b68ee3;
+    color: #281A31;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        width: 80%;
+        text-align: center;
+    }
+}
